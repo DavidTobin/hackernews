@@ -1,0 +1,15 @@
+$primaryColor: #ff6600
+$secondaryColor: #111
+$tertiaryColor: #1B4172
+$successColor: #66CD00
+
+// Fonts
+$fontColorLight: #ffffff
+$fontColorDark: #333333
+
+// Page
+$pageBackground: #f1f1f1
+
+// Component
+$componentBackgroundLight: #ffffff
+$componentBackground: $componentBackgroundLight

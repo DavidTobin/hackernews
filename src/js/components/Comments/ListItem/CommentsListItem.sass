@@ -1,0 +1,35 @@
+.Comments-ListItem
+  background: $secondaryColor
+  color: $fontColorLight
+
+  padding: 10px
+
+  line-height: 25px
+
+  border-bottom: 4px solid $primaryColor
+
+  .user
+    font-family: $extraFont
+
+  .comment
+    font-family: $lightFont
+    font-size: $baseFontSize * 1.2
+
+  .actions
+    background: lighten($secondaryColor, 10%)
+
+    font-size: $baseFontSize * 0.8
+
+    padding: 5px
+
+    margin-top: 10px
+
+    p
+      margin: 0
+
+.Comments-SubComments
+  .Comments-List
+    overflow-x: hidden
+
+  .Comments-ListItem
+    background: lighten($secondaryColor, 5%)

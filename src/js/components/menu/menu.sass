@@ -1,0 +1,45 @@
+.menu
+  padding: 0
+  margin: 10px 0 0 0
+
+  font-family: $lightFont
+  font-size: $baseFontSize * 1.2
+
+  > ul
+    width: 100%
+
+    list-style-type: none
+
+    margin: 0
+    padding: 0
+
+    > li
+      > a
+        display: block
+
+        transition: background 0.15s
+
+        padding: 10px 15px
+
+        text-align: center
+
+        background: lighten($secondaryColor, 5%)
+
+        text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.85)
+
+        color: inherit
+
+        overflow-x: hidden
+
+        &:hover, &.active
+          background: lighten($secondaryColor, 10%)
+
+        &:active
+          background: lighten($secondaryColor, 15%)
+
+        &:hover, &:active, &:visited, &:focus
+          text-decoration: none
+
+      @media (max-width: 768px)
+        display: inline-block
+        width: auto

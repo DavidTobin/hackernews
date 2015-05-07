@@ -1,0 +1,65 @@
+.layout-row
+  @include scrollbar(0.5em, $primaryColor)
+
+  > *
+    display: inline-block
+
+    padding-top: $headerHeight
+
+    height: 100vh
+    max-height: 100vh
+
+    vertical-align: top
+
+    overflow-y: auto
+
+    @media (max-width: 768px)
+      height: auto
+      max-height: initial
+
+  > main
+    width: 100%
+
+    transition: width 0.25s
+
+    -webkit-backface-visibility: hidden
+    -webkit-transform-style: preserve-3d
+
+  > aside
+    width: 3.5%
+
+    letter-spacing: 20px
+
+    transition: width 0.25s
+    -webkit-backface-visibility: hidden
+    -webkit-transform-style: preserve-3d
+
+    &:hover
+      width: 15%
+
+      letter-spacing: inherit
+
+      + main
+        width: 85%
+
+    @media (max-width: 768px)
+      display: block
+
+      width: 100%
+
+      letter-spacing: inherit
+
+      &:hover
+        width: 100%
+
+        + main
+          display: block
+          width: 100%
+
+  > aside + main
+    width: 96.5%
+
+    @media (max-width: 768px)
+      display: block
+
+      width: 100%

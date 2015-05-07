@@ -1,0 +1,75 @@
+.News-ListItem
+  background: $componentBackground
+
+  width: 90%
+  height: 50px
+
+  transition: height 0.5s, box-shadow 0.15s
+
+  margin: 0 auto
+  padding: 0 10px
+
+  overflow: hidden
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15)
+
+  box-shadow: 2px 2px 8px -1px rgba(0, 0, 0, 0.15)
+
+  &.expand
+    height: 650px
+
+    .Comments-List
+      height: 650px
+
+      overflow: auto
+
+      .Comments-List
+        height: auto
+
+        overflow: initial
+
+    .self-text
+      opacity: 1
+
+  > .row:first-child
+    &:hover
+      cursor: pointer
+
+      background: darken($componentBackground, 5%)
+
+  &:hover
+    box-shadow: 4px 4px 12px 0px rgba(0, 0, 0, 0.15)
+
+    z-index: 20
+
+  > *
+    line-height: 50px
+
+  h1
+    font-size: $baseFontSize * 1.4
+
+    line-height: 50px
+
+    margin: 0
+
+  .self-text
+    background: darken($componentBackground, 5%)
+
+    width: 90%
+
+    transition: all 0.5s
+
+    border: 1px solid darken($componentBackground, 10%)
+
+    padding: 10px
+    margin: 10px auto
+
+    opacity: 0
+
+    line-height: 25px
+
+  @media (max-width: 768px)
+    font-size: $baseFontSize * 0.6
+
+    h1
+      font-size: $baseFontSize * 0.8

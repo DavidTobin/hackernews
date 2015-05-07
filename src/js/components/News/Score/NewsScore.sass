@@ -1,0 +1,63 @@
+$newsScoreSize: 35px
+
+.News-Score
+  background: $successColor
+  color: $fontColorLight
+
+  border: none
+  outline: none
+
+  transition: background 0.25s
+
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.75)
+
+  height: $newsScoreSize
+  width: $newsScoreSize
+
+  margin: 5px auto
+
+  line-height: $newsScoreSize
+
+  border-radius: 100%
+
+  font-size: $baseFontSize * 0.9
+
+  &.inactive
+    background: lighten(desaturate($successColor, 60%), 20%)
+
+    &:hover
+      -webkit-animation: none
+
+      font-weight: normal
+      font-size: $baseFontSize * 0.9
+
+      &:before
+        content: attr(data-score)
+
+  &:before
+    content: attr(data-score)
+
+  &:active
+    background: lighten($successColor, 5%)
+
+  &:hover
+    font-weight: bold
+    font-size: $baseFontSize
+
+    &:before
+      content: "\2191"
+      text-indent: 0%
+
+    -webkit-animation: spin 0.2s 1 ease-in-out
+    white-space: nowrap
+    overflow: hidden
+
+@-webkit-keyframes spin
+  0%
+    transform: rotate(0deg)
+
+  50%
+    transform: rotate(180deg)
+
+  100%
+    transform: rotate(360deg)
